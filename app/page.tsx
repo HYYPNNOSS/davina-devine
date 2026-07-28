@@ -297,6 +297,9 @@ export default function Home() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.2 }}
                           className="absolute bottom-full left-0 right-0 mb-[8px] bg-[var(--color-warm-black)]/95 backdrop-blur-xl border border-white/15 rounded-[10px] overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.5)] z-50 max-h-[280px] overflow-y-auto"
+                          data-lenis-prevent="true"
+                          onWheel={(e) => e.stopPropagation()}
+                          onTouchMove={(e) => e.stopPropagation()}
                         >
                           {SERVICES.map((service, idx) => (
                             <button

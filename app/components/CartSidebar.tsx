@@ -94,7 +94,12 @@ export default function CartSidebar() {
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto px-[29px] py-[25px]">
+            <div 
+              className="flex-1 overflow-y-auto px-[29px] py-[25px]"
+              data-lenis-prevent="true"
+              onWheel={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+            >
               {status === 'success' ? (
                 <div className="h-full flex flex-col items-center justify-center text-center">
                   <div className="w-[60px] h-[60px] rounded-full bg-[var(--color-olive-green)]/20 text-[var(--color-olive-green)] flex items-center justify-center mb-[20px]">
