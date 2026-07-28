@@ -71,26 +71,27 @@ export default function MenuPage() {
 
               if (category === "Waxing") {
                 return (
-                  <div key={category} className="relative bg-[#050505] text-white rounded-[20px] overflow-hidden shadow-2xl p-[40px] md:p-[80px]">
-                    {/* Cinematic Background Elements */}
+                  <div key={category} className="relative w-full text-white rounded-[20px] overflow-hidden shadow-2xl p-[40px] md:p-[80px] min-h-[700px] lg:min-h-[800px] flex" style={{ background: "radial-gradient(ellipse at 70% 50%, #1E1710 0%, #0B0805 70%)" }}>
+                    
+                    {/* Figure as absolute backdrop */}
                     <div className="absolute inset-0 z-0">
-                      <Image 
-                        src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=2000" 
-                        alt="Cinematic Background" 
-                        fill 
-                        className="object-cover opacity-[0.25] mix-blend-luminosity"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/90 to-[#050505]/40" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
+                       <WaxingFigure 
+                         highlightedZones={hoveredWaxArea ? hoveredWaxArea.split(',') : []} 
+                         xBias={-0.5} 
+                         spotX="75%"
+                       />
                     </div>
 
-                    <div className="relative z-10">
+                    {/* Scrim for text legibility (Left side gradient) */}
+                    <div className="absolute inset-y-0 left-0 w-full lg:w-2/3 bg-gradient-to-r from-[#0B0805] via-[#0B0805]/80 to-transparent z-0 pointer-events-none" />
+
+                    <div className="relative z-10 w-full lg:w-1/3 flex flex-col h-full pointer-events-none">
                       <motion.div 
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="flex items-center gap-[20px] mb-[80px]"
+                        className="flex items-center gap-[20px] mb-[60px] pointer-events-auto"
                       >
                         <h2 className="text-[32px] md:text-[50px] font-medium text-white leading-none uppercase tracking-tight drop-shadow-md">
                           {category}
@@ -98,49 +99,39 @@ export default function MenuPage() {
                         <span className="flex-1 h-[1px] bg-white/20" />
                       </motion.div>
 
-                      <div className="flex flex-col lg:flex-row gap-[50px] lg:gap-[100px] items-start">
-                        {/* Left: Waxing Services List */}
-                        <div className="w-full lg:w-1/2 flex flex-col gap-[30px]">
-                          {categoryServices.map((service, index) => (
-                            <Link href={`/services/${service.id}`} key={service.id}>
-                              <motion.div 
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                className="flex flex-col group cursor-pointer border-b border-white/10 pb-[20px]"
-                                onMouseEnter={() => {
-                                  if (service.waxArea) {
-                                    setHoveredWaxArea(service.waxArea);
-                                  }
-                                }}
-                                onMouseLeave={() => setHoveredWaxArea(null)}
-                              >
-                                <div className="flex justify-between items-start mb-[5px]">
-                                  <h3 className="font-[family-name:var(--font-cardinal-fruit)] text-[28px] md:text-[34px] italic pr-[15px] leading-[1.1] text-white group-hover:text-[var(--color-olive-green)] transition-colors duration-500 drop-shadow-sm">
-                                    {service.name}
-                                  </h3>
-                                  <span className="text-[16px] font-medium shrink-0 text-[var(--color-olive-green)] pt-[5px] drop-shadow-sm">{service.price}</span>
-                                </div>
-                                <div className="flex items-center justify-between mt-[10px]">
-                                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-white/50">
-                                    {service.duration}
-                                  </p>
-                                  <span className="text-[11px] font-medium tracking-[0.15em] uppercase border-b border-white pb-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[10px] group-hover:translate-y-0 text-white drop-shadow-sm">
-                                    Book Now
-                                  </span>
-                                </div>
-                              </motion.div>
-                            </Link>
-                          ))}
-                        </div>
-
-                        {/* Right: Sticky Waxing Figure */}
-                        <div className="w-full lg:w-1/2 lg:sticky lg:top-[120px] h-[400px] md:h-[700px] mt-[40px] lg:mt-0 flex items-center justify-center overflow-hidden relative">
-                           {/* Cinematic Spotlight / Glow */}
-                           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[var(--color-olive-green)] rounded-full blur-[150px] opacity-[0.15] pointer-events-none" />
-                           <WaxingFigure highlightedZones={hoveredWaxArea ? hoveredWaxArea.split(',') : []} />
-                        </div>
+                      <div className="flex flex-col gap-[30px] pointer-events-auto">
+                        {categoryServices.map((service, index) => (
+                          <Link href={`/services/${service.id}`} key={service.id}>
+                            <motion.div 
+                              initial={{ opacity: 0, y: 30 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, margin: "-50px" }}
+                              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                              className="flex flex-col group cursor-pointer border-b border-white/10 pb-[20px]"
+                              onMouseEnter={() => {
+                                if (service.waxArea) {
+                                  setHoveredWaxArea(service.waxArea);
+                                }
+                              }}
+                              onMouseLeave={() => setHoveredWaxArea(null)}
+                            >
+                              <div className="flex justify-between items-start mb-[5px]">
+                                <h3 className="font-[family-name:var(--font-cardinal-fruit)] text-[28px] md:text-[34px] italic pr-[15px] leading-[1.1] text-white group-hover:text-[var(--color-olive-green)] transition-colors duration-500 drop-shadow-sm">
+                                  {service.name}
+                                </h3>
+                                <span className="text-[16px] font-medium shrink-0 text-[var(--color-olive-green)] pt-[5px] drop-shadow-sm">{service.price}</span>
+                              </div>
+                              <div className="flex items-center justify-between mt-[10px]">
+                                <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-white/50">
+                                  {service.duration}
+                                </p>
+                                <span className="text-[11px] font-medium tracking-[0.15em] uppercase border-b border-white pb-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[10px] group-hover:translate-y-0 text-white drop-shadow-sm">
+                                  Book Now
+                                </span>
+                              </div>
+                            </motion.div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </div>
