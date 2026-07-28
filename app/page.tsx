@@ -194,6 +194,7 @@ export default function Home() {
               priority
             />
 
+{/*  */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60 pointer-events-none" />
 
             <div className="absolute inset-0 p-[29px] pt-[60px] pointer-events-none flex flex-col justify-between pb-[50px]">
