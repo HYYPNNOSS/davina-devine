@@ -27,9 +27,10 @@ const ClipPathTitle = ({ title, bg, color }: { title: string, bg: string, color:
 
 export default function Home() {
   const [SERVICES, setServices] = useState<any[]>([]);
+  const [servicesLoading, setServicesLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/services').then(res => res.json()).then(data => setServices(data));
+    fetch('/api/services').then(res => res.json()).then(data => { setServices(data); setServicesLoading(false); });
   }, []);
 
   const containerRef = useRef(null);
@@ -37,7 +38,7 @@ export default function Home() {
 
   // Reservation state
   const [selectedDate, setSelectedDate] = useState('');
-  const [selectedService, setSelectedService] = useState('');
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [guests, setGuests] = useState(1);
   const [showBookingModal, setShowBookingModal] = useState(false);
   const [bookingName, setBookingName] = useState('');
@@ -46,16 +47,22 @@ export default function Home() {
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
 
+  const toggleService = (name: string) => {
+    setSelectedServices(prev =>
+      prev.includes(name) ? prev.filter(s => s !== name) : [...prev, name]
+    );
+  };
+
   // Get today's date in YYYY-MM-DD format for min date
   const today = new Date().toISOString().split('T')[0];
 
   const handleBookNow = () => {
-    if (!selectedDate || !selectedService) return;
+    if (!selectedDate || selectedServices.length === 0) return;
     setShowBookingModal(true);
   };
 
   const handleConfirmBooking = async () => {
-    if (!bookingName || !bookingEmail || !bookingPhone || !selectedDate || !selectedService) return;
+    if (!bookingName || !bookingEmail || !bookingPhone || !selectedDate || selectedServices.length === 0) return;
     
     try {
       await fetch('/api/reservations', {
@@ -66,7 +73,7 @@ export default function Home() {
           email: bookingEmail,
           phone: bookingPhone,
           date: selectedDate,
-          service: selectedService,
+          service: selectedServices.join(', '),
           guests: guests,
         })
       });
@@ -78,7 +85,7 @@ export default function Home() {
         setBookingEmail('');
         setBookingPhone('');
         setSelectedDate('');
-        setSelectedService('');
+        setSelectedServices([]);
         setGuests(1);
       }, 2500);
     } catch (e) {
@@ -86,7 +93,7 @@ export default function Home() {
     }
   };
 
-  const selectedServiceData = SERVICES.find(s => s.name === selectedService);
+  const selectedServicesData = SERVICES.filter(s => selectedServices.includes(s.name));
 
   // Lenis Smooth Scrolling
   useEffect(() => {
@@ -104,8 +111,18 @@ export default function Home() {
     }
     rafId = requestAnimationFrame(raf);
 
+    // Watch for dynamic DOM height changes (e.g. after SERVICES finish fetching)
+    const resizeObserver = new ResizeObserver(() => {
+      lenis.resize();
+    });
+
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
     return () => {
       cancelAnimationFrame(rafId);
+      resizeObserver.disconnect();
       lenis.destroy();
     };
   }, []);
@@ -282,15 +299,15 @@ export default function Home() {
                       >
                         <Clock size={16} strokeWidth={1.5} className="text-white/60 shrink-0" />
                         <div className="flex-1 min-w-0">
-                          <label className="text-[11px] uppercase tracking-[0.15em] text-white/50 font-medium block mb-[2px]">Service</label>
-                          <p className={`text-[15px] font-medium truncate ${selectedService ? 'text-white' : 'text-white/40'}`}>
-                            {selectedService || 'Select treatment'}
+                          <label className="text-[11px] uppercase tracking-[0.15em] text-white/50 font-medium block mb-[2px]">Services</label>
+                          <p className={`text-[15px] font-medium truncate ${selectedServices.length > 0 ? 'text-white' : 'text-white/40'}`}>
+                            {selectedServices.length === 0 ? 'Select treatments' : selectedServices.length === 1 ? selectedServices[0] : `${selectedServices.length} treatments selected`}
                           </p>
                         </div>
                         <ChevronDown size={14} strokeWidth={1.5} className={`text-white/50 shrink-0 transition-transform duration-300 ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
                       </div>
 
-                      {/* Service Dropdown */}
+                      {/*   */}
                       {serviceDropdownOpen && (
                         <motion.div
                           initial={{ opacity: 0, y: -8 }}
@@ -301,26 +318,39 @@ export default function Home() {
                           onWheel={(e) => e.stopPropagation()}
                           onTouchMove={(e) => e.stopPropagation()}
                         >
-                          {SERVICES.map((service, idx) => (
-                            <button
-                              key={idx}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setSelectedService(service.name);
-                                setServiceDropdownOpen(false);
-                              }}
-                              className={`w-full text-left px-[17px] py-[13px] flex items-center justify-between gap-[12px] transition-colors ${selectedService === service.name
-                                  ? 'bg-[var(--color-olive-green)]/20 text-[var(--color-olive-green)]'
-                                  : 'text-white/80 hover:bg-white/8'
+                          <div className="px-[17px] py-[10px] border-b border-white/10">
+                            <p className="text-[11px] uppercase tracking-[0.15em] text-white/40 font-medium">Select one or more treatments</p>
+                          </div>
+                          {SERVICES.map((service, idx) => {
+                            const isSelected = selectedServices.includes(service.name);
+                            return (
+                              <button
+                                key={idx}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleService(service.name);
+                                }}
+                                className={`w-full text-left px-[17px] py-[13px] flex items-center justify-between gap-[12px] transition-colors ${
+                                  isSelected
+                                    ? 'bg-[var(--color-olive-green)]/20 text-[var(--color-olive-green)]'
+                                    : 'text-white/80 hover:bg-white/8'
                                 } ${idx !== SERVICES.length - 1 ? 'border-b border-white/5' : ''}`}
-                            >
-                              <div className="min-w-0">
-                                <p className="text-[14px] font-medium truncate">{service.name}</p>
-                                <p className="text-[12px] opacity-50 mt-[2px]">{service.duration}</p>
-                              </div>
-                              <span className="text-[13px] font-medium shrink-0 opacity-70">{service.price}</span>
-                            </button>
-                          ))}
+                              >
+                                <div className="min-w-0 flex items-center gap-[10px]">
+                                  <span className={`w-[16px] h-[16px] rounded-[4px] border flex items-center justify-center shrink-0 transition-colors ${
+                                    isSelected ? 'border-[var(--color-olive-green)] bg-[var(--color-olive-green)]' : 'border-white/30'
+                                  }`}>
+                                    {isSelected && <Check size={10} strokeWidth={3} className="text-[var(--color-warm-black)]" />}
+                                  </span>
+                                  <div>
+                                    <p className="text-[14px] font-medium truncate">{service.name}</p>
+                                    <p className="text-[12px] opacity-50 mt-[2px]">{service.duration}</p>
+                                  </div>
+                                </div>
+                                <span className="text-[13px] font-medium shrink-0 opacity-70">{service.price}</span>
+                              </button>
+                            );
+                          })}
                         </motion.div>
                       )}
                     </div>
@@ -350,8 +380,8 @@ export default function Home() {
                     {/* Book Now Button */}
                     <button
                       onClick={handleBookNow}
-                      disabled={!selectedDate || !selectedService}
-                      className={`md:w-auto px-[33px] py-[14px] rounded-[7px] font-medium text-[15px] transition-all duration-300 flex items-center justify-center gap-[8px] shrink-0 ${selectedDate && selectedService
+                      disabled={!selectedDate || selectedServices.length === 0}
+                      className={`md:w-auto px-[33px] py-[14px] rounded-[7px] font-medium text-[15px] transition-all duration-300 flex items-center justify-center gap-[8px] shrink-0 ${selectedDate && selectedServices.length > 0
                           ? 'bg-[var(--color-olive-green)] text-[var(--color-warm-black)] hover:brightness-110 shadow-[0_4px_16px_rgba(246,142,109,0.3)]'
                           : 'bg-white/10 text-white/30 cursor-not-allowed'
                         }`}
@@ -362,15 +392,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Selected service info pill */}
-                {selectedServiceData && selectedDate && (
+                {/* Selected services info pills */}
+                {selectedServices.length > 0 && selectedDate && (
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-[10px] flex items-center gap-[10px] text-white/60 text-[13px] px-[8px]"
+                    className="mt-[10px] flex items-center gap-[10px] text-white/60 text-[13px] px-[8px] flex-wrap"
                   >
-                    <span className="bg-white/10 px-[10px] py-[4px] rounded-full">{selectedServiceData.duration}</span>
-                    <span className="bg-white/10 px-[10px] py-[4px] rounded-full">From {selectedServiceData.price}</span>
+                    {selectedServices.map((name, i) => (
+                      <span key={i} className="bg-[var(--color-olive-green)]/30 text-white px-[10px] py-[4px] rounded-full flex items-center gap-[6px]">
+                        {name}
+                        <button onClick={() => toggleService(name)} className="opacity-60 hover:opacity-100"><X size={10} strokeWidth={2.5}/></button>
+                      </span>
+                    ))}
                     <span className="bg-white/10 px-[10px] py-[4px] rounded-full">{guests} {guests === 1 ? 'guest' : 'guests'}</span>
                   </motion.div>
                 )}
@@ -680,42 +714,65 @@ export default function Home() {
           }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[33px]"
         >
-          {servicesToDisplay.map((item, idx) => (
-            <Link href={`/services/${item.id}`} key={item.id || idx}>
-              <motion.div variants={fadeUp} className="bg-transparent flex flex-col group cursor-pointer h-full">
-                <div className="relative aspect-square rounded-[5px] overflow-hidden bg-[var(--color-creamy-white)]">
-                  {item.category && (
-                    <div className="absolute top-[10px] right-[10px] z-10 bg-[var(--color-stone)] text-[var(--color-warm-black)] text-[13px] font-medium px-[8px] py-[4px] rounded-[5px] uppercase">
-                      {item.category}
+          {servicesLoading
+            ? Array.from({ length: 6 }).map((_, idx) => (
+                <div key={idx} className="flex flex-col gap-[13px] animate-pulse">
+                  <div className="aspect-square rounded-[5px] bg-[var(--color-stone)]/60" />
+                  <div className="h-[14px] w-[60%] rounded-full bg-[var(--color-stone)]/60" />
+                  <div className="h-[12px] w-[40%] rounded-full bg-[var(--color-stone)]/40" />
+                </div>
+              ))
+            : servicesToDisplay.map((item, idx) => {
+                const isAdded = selectedServices.includes(item.name);
+                return (
+                  <motion.div key={item.id || idx} variants={fadeUp} className="bg-transparent flex flex-col group cursor-pointer h-full">
+                    <Link href={`/services/${item.id}`} className="block">
+                      <div className="relative aspect-square rounded-[5px] overflow-hidden bg-[var(--color-creamy-white)]">
+                        {item.category && (
+                          <div className="absolute top-[10px] right-[10px] z-10 bg-[var(--color-stone)] text-[var(--color-warm-black)] text-[13px] font-medium px-[8px] py-[4px] rounded-[5px] uppercase">
+                            {item.category}
+                          </div>
+                        )}
+                        <Image
+                          src={item.imageUrl || "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&q=80&w=800"}
+                          alt={item.name}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+                    </Link>
+                    <div className="pt-[17px] flex justify-between items-start flex-1 gap-[10px]">
+                      <div className="min-w-0">
+                        <Link href={`/services/${item.id}`}>
+                          <h4 className="font-medium text-[15px] hover:underline">{item.name}</h4>
+                        </Link>
+                        {item.waxArea && (
+                          <p className="text-[11px] uppercase tracking-wider text-[var(--color-olive-green)] font-medium mt-[4px]">Area: {item.waxArea}</p>
+                        )}
+                        {item.description ? (
+                           <p className="text-[13px] text-opacity-80 max-w-[90%] mt-[4px] leading-[1.4] line-clamp-2">{item.description}</p>
+                        ) : (
+                           <p className="text-[13px] text-opacity-80 max-w-[90%] mt-[4px] leading-[1.3]">{item.duration} &middot; {item.price}</p>
+                        )}
+                        {item.description && (
+                           <p className="text-[12px] opacity-50 mt-[6px] font-medium tracking-wide">{item.duration} &middot; {item.price}</p>
+                        )}
+                      </div>
+                      <button
+                        onClick={() => toggleService(item.name)}
+                        className={`shrink-0 flex items-center gap-[6px] text-[12px] font-medium px-[10px] py-[6px] rounded-[5px] transition-all duration-200 border ${
+                          isAdded
+                            ? 'bg-[var(--color-olive-green)] border-[var(--color-olive-green)] text-[var(--color-warm-black)]'
+                            : 'border-[var(--color-stone)] text-[var(--color-warm-black)] hover:border-[var(--color-olive-green)] hover:text-[var(--color-olive-green)]'
+                        }`}
+                      >
+                        {isAdded ? <><Check size={11} strokeWidth={2.5} />ADDED</> : <>+ BOOK</>}
+                      </button>
                     </div>
-                  )}
-                  <Image
-                    src={item.imageUrl || "https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&q=80&w=800"}
-                    alt={item.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="pt-[17px] flex justify-between items-start flex-1">
-                  <div>
-                    <h4 className="font-medium text-[15px]">{item.name}</h4>
-                    {item.waxArea && (
-                      <p className="text-[11px] uppercase tracking-wider text-[var(--color-olive-green)] font-medium mt-[4px]">Area: {item.waxArea}</p>
-                    )}
-                    {item.description ? (
-                       <p className="text-[13px] text-opacity-80 max-w-[90%] mt-[4px] leading-[1.4] line-clamp-2">{item.description}</p>
-                    ) : (
-                       <p className="text-[13px] text-opacity-80 max-w-[90%] mt-[4px] leading-[1.3]">{item.duration} &middot; {item.price}</p>
-                    )}
-                    {item.description && (
-                       <p className="text-[12px] opacity-50 mt-[6px] font-medium tracking-wide">{item.duration} &middot; {item.price}</p>
-                    )}
-                  </div>
-                  <span className="text-[13px] font-medium shrink-0 group-hover:underline">MORE</span>
-                </div>
-              </motion.div>
-            </Link>
-          ))}
+                  </motion.div>
+                );
+              })
+          }
         </motion.div>
       </section>
 
@@ -875,30 +932,25 @@ export default function Home() {
                 <div className="bg-[var(--color-stone)]/50 rounded-[10px] p-[17px] mb-[25px]">
                   <p className="text-[11px] uppercase tracking-[0.15em] opacity-50 mb-[10px] font-medium">Booking summary</p>
                   <div className="space-y-[6px]">
-                    <div className="flex justify-between text-[14px]">
-                      <span className="opacity-60">Service</span>
-                      <span className="font-medium text-right max-w-[250px] truncate">{selectedService}</span>
+                    <div className="text-[14px]">
+                      <span className="opacity-60 block mb-[6px]">Services</span>
+                      <div className="space-y-[4px]">
+                        {selectedServicesData.map((s, i) => (
+                          <div key={i} className="flex justify-between items-center">
+                            <span className="font-medium text-right truncate max-w-[200px]">{s.name}</span>
+                            <span className="opacity-60 shrink-0 ml-[8px]">{s.price}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex justify-between text-[14px]">
+                    <div className="flex justify-between text-[14px] pt-[6px] border-t border-[var(--color-stone)]">
                       <span className="opacity-60">Date</span>
                       <span className="font-medium">{new Date(selectedDate + 'T12:00:00').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' })}</span>
                     </div>
-                    {selectedServiceData && (
-                      <div className="flex justify-between text-[14px]">
-                        <span className="opacity-60">Duration</span>
-                        <span className="font-medium">{selectedServiceData.duration}</span>
-                      </div>
-                    )}
                     <div className="flex justify-between text-[14px]">
                       <span className="opacity-60">Guests</span>
                       <span className="font-medium">{guests}</span>
                     </div>
-                    {selectedServiceData && (
-                      <div className="flex justify-between text-[14px] pt-[6px] border-t border-[var(--color-stone)]">
-                        <span className="opacity-60">From</span>
-                        <span className="font-medium text-[var(--color-olive-green)]">{selectedServiceData.price}</span>
-                      </div>
-                    )}
                   </div>
                 </div>
 
