@@ -373,7 +373,7 @@ export default function AdminPage() {
                     </h3>
                   </div>
                   <div className="space-y-[13px]">
-                    {groupedReservations[date].map((res, idx) => (
+                    {groupedReservations[date].map((res: any, idx: number) => (
                       <div key={res.id || idx} className="bg-[var(--color-creamy-white)] rounded-[10px] p-[17px] flex flex-col md:flex-row md:items-center justify-between gap-[17px] border border-[var(--color-stone)]/30 ml-[13px] border-l-4 border-l-[var(--color-olive-green)]/30">
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-[8px] mb-[4px]">
