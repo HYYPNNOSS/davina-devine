@@ -29,6 +29,7 @@ interface ServiceData {
   price: string;
   description: string;
   waxArea?: string;
+  image?: string;
 }
 
 async function main() {
@@ -56,6 +57,7 @@ async function main() {
         category: service.category,
         description: service.description ?? null,
         waxArea: service.waxArea ?? null,
+        imageUrl: service.image ?? null,
       },
     });
     count++;

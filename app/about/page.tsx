@@ -72,7 +72,7 @@ export default function AboutPage() {
               <div key={i} className="inline-flex overflow-hidden">
                 <motion.span
                   variants={charVariant}
-                  className="inline-block text-white text-[80px] md:text-[140px] leading-[0.85] tracking-tight"
+                  className="inline-block text-white text-[50px] md:text-[140px] leading-[0.85] tracking-tight"
                 >
                   {char === " " ? "\u00A0" : char}
                 </motion.span>

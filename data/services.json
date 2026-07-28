@@ -5,7 +5,8 @@
     "name": "Express Manicure",
     "duration": "45 mins",
     "price": "£25.00",
-    "description": "An express treatment to shape and polish the nails with a shade from our sister brand. Choose from a wide range of traditional polishes that give you a gel-like finish without the commitment."
+    "description": "An express treatment to shape and polish the nails with a shade from our sister brand. Choose from a wide range of traditional polishes that give you a gel-like finish without the commitment.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "name": "Classic Davinia Manicure",
     "duration": "45 mins",
     "price": "£38.00",
-    "description": "Our best-selling classic — your expert technician will soak and soften cuticles before completing a cuticle tidy to ensure a clean and polished look. Your nails will be shaped to your preference and perfectly prepped."
+    "description": "Our best-selling classic — your expert technician will soak and soften cuticles before completing a cuticle tidy to ensure a clean and polished look. Your nails will be shaped to your preference and perfectly prepped.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "name": "Classic BIAB™ Manicure",
     "duration": "90 mins",
     "price": "£50.00",
-    "description": "Classic BIAB™ Manicure (AKA The original Builder In A Bottle™). Designed to grow and strengthen naturally weak nails, our iconic builder gel is available in over 60 shades."
+    "description": "Classic BIAB™ Manicure (AKA The original Builder In A Bottle™). Designed to grow and strengthen naturally weak nails, our iconic builder gel is available in over 60 shades.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "name": "Classic BIAB™ Infill",
     "duration": "90 mins",
     "price": "£50.00",
-    "description": "Refresh your existing BIAB™ mani with a new layer of strengthening support. Fancy a colour change? Upgrade to add a layer of gel polish on top."
+    "description": "Refresh your existing BIAB™ mani with a new layer of strengthening support. Fancy a colour change? Upgrade to add a layer of gel polish on top.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "5",
@@ -37,7 +41,8 @@
     "name": "Luxury Davinia Manicure",
     "duration": "75 mins",
     "price": "£65.00",
-    "description": "The ultimate spa experience for your nails. Indulge in our elevated gel manicure with the complete Davinia 6-step system."
+    "description": "The ultimate spa experience for your nails. Indulge in our elevated gel manicure with the complete Davinia 6-step system.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "6",
@@ -45,7 +50,8 @@
     "name": "Mini Mani (Under 10 Years Old)",
     "duration": "45 mins",
     "price": "£20.00",
-    "description": "The perfect pampering for little hands! Our Mini Mani is specially designed for children, featuring gentle nail filing and a pop of colour."
+    "description": "The perfect pampering for little hands! Our Mini Mani is specially designed for children, featuring gentle nail filing and a pop of colour.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "7",
@@ -53,7 +59,8 @@
     "name": "Gel Removal",
     "duration": "20 mins",
     "price": "£15.00",
-    "description": "Out with the old and in with the new! Book a Gel Removal at Davinia Devine to refresh your nails."
+    "description": "Out with the old and in with the new! Book a Gel Removal at Davinia Devine to refresh your nails.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "8",
@@ -61,7 +68,8 @@
     "name": "BIAB™ Removal",
     "duration": "30 mins",
     "price": "£20.00",
-    "description": "Book a BIAB™ removal session with our professional team of nail techs ahead of your next set."
+    "description": "Book a BIAB™ removal session with our professional team of nail techs ahead of your next set.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "9",
@@ -69,7 +77,8 @@
     "name": "Express Pedicure",
     "duration": "45 mins",
     "price": "£25.00",
-    "description": "An express pedi to polish toes with a shade from our sister brand."
+    "description": "An express pedi to polish toes with a shade from our sister brand.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "10",
@@ -77,7 +86,8 @@
     "name": "Classic Davinia Pedicure",
     "duration": "60 mins",
     "price": "£45.00",
-    "description": "Experience our Classic Gel Pedicure. Your expert technician will soak and soften the skin before completing a cuticle tidy to ensure a clean, polished look."
+    "description": "Experience our Classic Gel Pedicure. Your expert technician will soak and soften the skin before completing a cuticle tidy to ensure a clean, polished look.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "11",
@@ -85,7 +95,8 @@
     "name": "Classic BIAB™ Pedicure",
     "duration": "75 mins",
     "price": "£75.00",
-    "description": "Our iconic BIAB™ is perfect for an extra-strength pedi! Provides a flexible, strong builder gel in over 60 different shades."
+    "description": "Our iconic BIAB™ is perfect for an extra-strength pedi! Provides a flexible, strong builder gel in over 60 different shades.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "12",
@@ -93,7 +104,8 @@
     "name": "Luxury Davinia Pedicure",
     "duration": "90 mins",
     "price": "£65.00",
-    "description": "A spa day for your feet — this is the ultimate pedicure experience. Beginning with a soothing foot soak, your feet will be reinvigorated by a rejuvenating exfoliation."
+    "description": "A spa day for your feet — this is the ultimate pedicure experience. Beginning with a soothing foot soak, your feet will be reinvigorated by a rejuvenating exfoliation.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "13",
@@ -101,7 +113,8 @@
     "name": "Express Extensions",
     "duration": "75 mins",
     "price": "£70.00",
-    "description": "Looking for length? DesignEx Pro™ is the quickest way to extend your nails with a flawless shape and design."
+    "description": "Looking for length? DesignEx Pro™ is the quickest way to extend your nails with a flawless shape and design.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "14",
@@ -109,7 +122,8 @@
     "name": "Gel Extensions Set",
     "duration": "120 mins",
     "price": "£80.00",
-    "description": "If you’re after hand-crafted, long-lasting extensions, then a set of ProForm™ nails is exactly what you need."
+    "description": "If you’re after hand-crafted, long-lasting extensions, then a set of ProForm™ nails is exactly what you need.",
+    "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "15",
@@ -117,7 +131,8 @@
     "name": "Davinia Blow-Dry",
     "duration": "45 mins",
     "price": "£60.00",
-    "description": "Experience a luxury wash, including two shampoos, conditioner and a luxury head massage, followed by a best-in-class blow-dry and styling of your choice."
+    "description": "Experience a luxury wash, including two shampoos, conditioner and a luxury head massage, followed by a best-in-class blow-dry and styling of your choice.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "16",
@@ -125,7 +140,8 @@
     "name": "Cut & Finish",
     "duration": "60 mins",
     "price": "£90.00",
-    "description": "Starting with a full and thorough consultation, your expert stylist will cut, shape and style your hair into your desired style."
+    "description": "Starting with a full and thorough consultation, your expert stylist will cut, shape and style your hair into your desired style.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "17",
@@ -133,7 +149,8 @@
     "name": "Barbering",
     "duration": "45 mins",
     "price": "£50.00",
-    "description": "A luxury barbering experience with clipper and scissor work, plus beard tidy with a hot towel treatment if required."
+    "description": "A luxury barbering experience with clipper and scissor work, plus beard tidy with a hot towel treatment if required.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "18",
@@ -141,7 +158,8 @@
     "name": "Hair Up or Occasion Styling",
     "duration": "From 60 mins",
     "price": "£90.00",
-    "description": "The ultimate prep for big events: hair is washed and prepped with specialist products, then styled into your desired look."
+    "description": "The ultimate prep for big events: hair is washed and prepped with specialist products, then styled into your desired look.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "19",
@@ -149,7 +167,8 @@
     "name": "Full-Head Highlights or Balayage",
     "duration": "90 mins",
     "price": "£150.00",
-    "description": "Precision colouring. Your colourist will apply customised shades to sections of hair to create contrast and dimension for an overall lightening effect."
+    "description": "Precision colouring. Your colourist will apply customised shades to sections of hair to create contrast and dimension for an overall lightening effect.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "20",
@@ -157,7 +176,8 @@
     "name": "Half-Head Highlights or Balayage",
     "duration": "60 mins",
     "price": "£120.00",
-    "description": "A freehand hair colouring technique that creates natural, sun-kissed highlights with a soft, blended gradient effect."
+    "description": "A freehand hair colouring technique that creates natural, sun-kissed highlights with a soft, blended gradient effect.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "21",
@@ -165,7 +185,8 @@
     "name": "Full-Head Tint or Semi-Perm Gloss",
     "duration": "60 mins",
     "price": "£80.00",
-    "description": "Your stylist will assess your needs and desired colour, selecting either an ammonia-free perm colour or a semi-permanent colour to achieve your dream finish."
+    "description": "Your stylist will assess your needs and desired colour, selecting either an ammonia-free perm colour or a semi-permanent colour to achieve your dream finish.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "22",
@@ -173,7 +194,8 @@
     "name": "Keratin Complex Smoothing Treatment",
     "duration": "150 mins",
     "price": "£240.00",
-    "description": "Discover our revolutionary portfolio of keratin smoothing treatments designed to make your hair healthier, eliminating frizz and increasing manageability. Lasts 5 months."
+    "description": "Discover our revolutionary portfolio of keratin smoothing treatments designed to make your hair healthier, eliminating frizz and increasing manageability. Lasts 5 months.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "23",
@@ -181,7 +203,8 @@
     "name": "Scalp Steam Treatment",
     "duration": "30 mins",
     "price": "£40.00",
-    "description": "A deeply penetrating detoxifying scalp steam that uses warm vapour to open pores, promote circulation and remove product build-up."
+    "description": "A deeply penetrating detoxifying scalp steam that uses warm vapour to open pores, promote circulation and remove product build-up.",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "24",
@@ -189,7 +212,8 @@
     "name": "Brow Wax & Tint",
     "duration": "30 mins",
     "price": "£30.00",
-    "description": "Precision shaping, tinting and grooming for perfectly defined, sculpted brows."
+    "description": "Precision shaping, tinting and grooming for perfectly defined, sculpted brows.",
+    "image": "https://images.unsplash.com/photo-1587775791771-33100234ce67?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "25",
@@ -197,7 +221,8 @@
     "name": "Brow Lamination & Tint",
     "duration": "45 mins",
     "price": "£80.00",
-    "description": "Elevate your look with beautifully balanced brows tailored to suit your face shape and style."
+    "description": "Elevate your look with beautifully balanced brows tailored to suit your face shape and style.",
+    "image": "https://images.unsplash.com/photo-1587775791771-33100234ce67?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "26",
@@ -205,7 +230,8 @@
     "name": "Korean Lash Lift",
     "duration": "60 mins",
     "price": "£75.00",
-    "description": "Custom eyelash lift to create dramatic or natural-looking volume tailored to your eye and face shape."
+    "description": "Custom eyelash lift to create dramatic or natural-looking volume tailored to your eye and face shape.",
+    "image": "https://images.unsplash.com/photo-1587775791771-33100234ce67?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "27",
@@ -213,7 +239,8 @@
     "name": "Classic Lashes Full Set",
     "duration": "90 mins",
     "price": "£55.00",
-    "description": "Expert treatments designed to enhance your features with meticulously applied classic lashes."
+    "description": "Expert treatments designed to enhance your features with meticulously applied classic lashes.",
+    "image": "https://images.unsplash.com/photo-1587775791771-33100234ce67?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "28",
@@ -221,7 +248,8 @@
     "name": "Russian Lashes Full Set",
     "duration": "135 mins",
     "price": "£65.00",
-    "description": "Dramatic, eye-catching glamour. Each treatment is performed with meticulous care in our signature calming environment."
+    "description": "Dramatic, eye-catching glamour. Each treatment is performed with meticulous care in our signature calming environment.",
+    "image": "https://images.unsplash.com/photo-1587775791771-33100234ce67?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "29",
@@ -229,7 +257,8 @@
     "name": "The Regenerator (Anti-Ageing)",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "Decelerate signs of ageing with this total skin reboot. Potent Hyaluronic Acid and Peptides are used to encourage collagen production."
+    "description": "Decelerate signs of ageing with this total skin reboot. Potent Hyaluronic Acid and Peptides are used to encourage collagen production.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "30",
@@ -237,7 +266,8 @@
     "name": "The Detox (Radiance)",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "A deep cleansing facial like no other, this treatment has been designed to reclaim your skin’s glow. Detoxing skin at a cellular level."
+    "description": "A deep cleansing facial like no other, this treatment has been designed to reclaim your skin’s glow. Detoxing skin at a cellular level.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "31",
@@ -245,7 +275,8 @@
     "name": "Daily Defence",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "A must for city dwellers, this facial is like a strengthening skin smoothie. Your skin is fed a cocktail of antioxidants."
+    "description": "A must for city dwellers, this facial is like a strengthening skin smoothie. Your skin is fed a cocktail of antioxidants.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "32",
@@ -253,7 +284,8 @@
     "name": "Myofascial & Buccal Massage",
     "duration": "45 mins",
     "price": "£80.00",
-    "description": "Starting with a gentle cleanse, manipulate the facial fascia to improve skin tone, texture, puffiness, and jawline definition."
+    "description": "Starting with a gentle cleanse, manipulate the facial fascia to improve skin tone, texture, puffiness, and jawline definition.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "33",
@@ -261,7 +293,8 @@
     "name": "Crystal Retinal Age-Defying Facial",
     "duration": "60 mins",
     "price": "£125.00",
-    "description": "Powered by a supercharged Crystal Retinal concentrate and a signature lifting massage, this no-downtime treatment visibly firms, smooths and illuminates."
+    "description": "Powered by a supercharged Crystal Retinal concentrate and a signature lifting massage, this no-downtime treatment visibly firms, smooths and illuminates.",
+    "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "34",
@@ -269,7 +302,8 @@
     "name": "Botox Anti-Wrinkle Injections (1 area)",
     "duration": "30 mins",
     "price": "£175.00",
-    "description": "The ultimate anti-wrinkle solution, expertly administered to smooth wrinkles and refresh skin."
+    "description": "The ultimate anti-wrinkle solution, expertly administered to smooth wrinkles and refresh skin.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "35",
@@ -277,7 +311,8 @@
     "name": "Botox Anti-Wrinkle Injections (3 areas)",
     "duration": "50 mins",
     "price": "£275.00",
-    "description": "Treat areas such as forehead lines, frown lines, crow's feet, eyebrows, and lip lines."
+    "description": "Treat areas such as forehead lines, frown lines, crow's feet, eyebrows, and lip lines.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "36",
@@ -285,7 +320,8 @@
     "name": "Dermal Fillers - Jaw Line (2ml)",
     "duration": "30 mins",
     "price": "£500.00",
-    "description": "Restore lost volume and rejuvenate your complexion. Designed to smooth deep lines and enhance facial contours."
+    "description": "Restore lost volume and rejuvenate your complexion. Designed to smooth deep lines and enhance facial contours.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "37",
@@ -293,7 +329,8 @@
     "name": "Dermal Fillers - Cheeks (1ml)",
     "duration": "30 mins",
     "price": "£285.00",
-    "description": "Define your cheekbones and lift your facial structure for a plumper, more youthful appearance."
+    "description": "Define your cheekbones and lift your facial structure for a plumper, more youthful appearance.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "38",
@@ -301,7 +338,8 @@
     "name": "Profhilo® Single Treatment",
     "duration": "30 mins",
     "price": "£280.00",
-    "description": "A cutting-edge injectable skin revitaliser designed to deeply hydrate and rejuvenate by stimulating collagen and elastin production."
+    "description": "A cutting-edge injectable skin revitaliser designed to deeply hydrate and rejuvenate by stimulating collagen and elastin production.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "39",
@@ -309,7 +347,8 @@
     "name": "Profhilo® Structura",
     "duration": "30 mins",
     "price": "£350.00",
-    "description": "Advanced injectable treatment designed to restore facial volume and improve skin quality in a subtle, natural-looking way."
+    "description": "Advanced injectable treatment designed to restore facial volume and improve skin quality in a subtle, natural-looking way.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "40",
@@ -317,7 +356,8 @@
     "name": "Seventy Hyal Skin Booster",
     "duration": "30 mins",
     "price": "£180.00",
-    "description": "Refresh and hydrate your skin, designed to reduce fine lines and restore a glowing appearance."
+    "description": "Refresh and hydrate your skin, designed to reduce fine lines and restore a glowing appearance.",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "41",
@@ -325,7 +365,8 @@
     "name": "Inner Calm Massage",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "Quieten your mind, release tension and nourish your skin with this holistic and ultimately restorative experience."
+    "description": "Quieten your mind, release tension and nourish your skin with this holistic and ultimately restorative experience.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "42",
@@ -333,7 +374,8 @@
     "name": "Back, Neck & Shoulder Massage",
     "duration": "30 mins",
     "price": "£70.00",
-    "description": "Ease tension where you need it most with this fast-acting, de-stressing treatment using pure aromatherapy blends."
+    "description": "Ease tension where you need it most with this fast-acting, de-stressing treatment using pure aromatherapy blends.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "43",
@@ -341,7 +383,8 @@
     "name": "Swedish Massage",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "Revive your body and enliven your spirits with this invigorating massage. Boosts circulation and alleviates tight, aching muscles."
+    "description": "Revive your body and enliven your spirits with this invigorating massage. Boosts circulation and alleviates tight, aching muscles.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "44",
@@ -349,7 +392,8 @@
     "name": "Deep Muscle Massage",
     "duration": "90 mins",
     "price": "£145.00",
-    "description": "Restore comfort, suppleness and movement with this intensely effective massage. Active stretching and specialised massage."
+    "description": "Restore comfort, suppleness and movement with this intensely effective massage. Active stretching and specialised massage.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "45",
@@ -357,7 +401,8 @@
     "name": "Pre-Natal Relax & Restore",
     "duration": "60 mins",
     "price": "£100.00",
-    "description": "Nurture your changing body and calm your mind with this beautifully comforting treatment, personalised to your needs and stage of pregnancy."
+    "description": "Nurture your changing body and calm your mind with this beautifully comforting treatment, personalised to your needs and stage of pregnancy.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "46",
@@ -365,7 +410,8 @@
     "name": "Salt & Oil Scrub",
     "duration": "45 mins",
     "price": "£70.00",
-    "description": "Restore your skin's natural softness and glow with our intensive exfoliating treatment. A luxurious blend of sea salt and pure, nutrient-rich oils."
+    "description": "Restore your skin's natural softness and glow with our intensive exfoliating treatment. A luxurious blend of sea salt and pure, nutrient-rich oils.",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "47",
@@ -374,7 +420,8 @@
     "duration": "40 mins",
     "price": "£25.00",
     "description": "Luxury waxing treatment to remove stubborn hair while minimising irritation.",
-    "waxArea": "legs"
+    "waxArea": "legs",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "48",
@@ -383,7 +430,8 @@
     "duration": "60 mins",
     "price": "£35.00",
     "description": "Silky smooth full leg wax using premium hot wax for lasting results.",
-    "waxArea": "legs"
+    "waxArea": "legs",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "49",
@@ -392,7 +440,8 @@
     "duration": "20 mins",
     "price": "£25.00",
     "description": "Quick and efficient tidy up for the bikini line.",
-    "waxArea": "bikini"
+    "waxArea": "bikini",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "50",
@@ -401,7 +450,8 @@
     "duration": "30 mins",
     "price": "£38.00",
     "description": "Precision hot wax treatment for delicate areas, leaving you smooth.",
-    "waxArea": "bikini"
+    "waxArea": "bikini",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "51",
@@ -410,7 +460,8 @@
     "duration": "45 mins",
     "price": "£45.00",
     "description": "Complete hair removal using sensitive hot wax for maximum comfort.",
-    "waxArea": "bikini"
+    "waxArea": "bikini",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "52",
@@ -419,7 +470,8 @@
     "duration": "20 mins",
     "price": "£15.00",
     "description": "Gentle and quick hair removal for the underarm area.",
-    "waxArea": "underarms"
+    "waxArea": "underarms",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "53",
@@ -428,7 +480,8 @@
     "duration": "45 mins",
     "price": "£28.00",
     "description": "Complete arm waxing leaving skin exfoliated and soft.",
-    "waxArea": "arms"
+    "waxArea": "arms",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "54",
@@ -437,7 +490,8 @@
     "duration": "60 mins",
     "price": "£35.00",
     "description": "Thorough back waxing treatment for lasting smoothness.",
-    "waxArea": "back"
+    "waxArea": "back",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "55",
@@ -446,7 +500,8 @@
     "duration": "15 mins",
     "price": "£20.00",
     "description": "Precision facial waxing for delicate skin.",
-    "waxArea": "face"
+    "waxArea": "face",
+    "image": "https://images.unsplash.com/photo-1552693673-1bf958298935?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "56",
@@ -454,7 +509,8 @@
     "name": "Deluxe Hydrafacial®",
     "duration": "45 mins",
     "price": "£165.00",
-    "description": "A procedure that deeply cleanses, peels, extracts, and then hydrates the skin utilising super serums filled with antioxidants and hyaluronic acid."
+    "description": "A procedure that deeply cleanses, peels, extracts, and then hydrates the skin utilising super serums filled with antioxidants and hyaluronic acid.",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "57",
@@ -462,7 +518,8 @@
     "name": "Platinum Hydrafacial®",
     "duration": "60 mins",
     "price": "£185.00",
-    "description": "The most comprehensive treatment from Hydrafacial®. Includes transformative lymphatic drainage that alleviates inflammation."
+    "description": "The most comprehensive treatment from Hydrafacial®. Includes transformative lymphatic drainage that alleviates inflammation.",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "58",
@@ -470,7 +527,8 @@
     "name": "Morpheus8™ Face & Neck",
     "duration": "120 mins",
     "price": "£550.00",
-    "description": "State-of-the-art skin technology that stimulates collagen and elastin, encouraging your skin to rebuild. Expert microneedling and advanced radio frequency."
+    "description": "State-of-the-art skin technology that stimulates collagen and elastin, encouraging your skin to rebuild. Expert microneedling and advanced radio frequency.",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "59",
@@ -478,7 +536,8 @@
     "name": "Forma Celebrity Facial",
     "duration": "60 mins",
     "price": "£150.00",
-    "description": "Hailed as the ‘Red Carpet Facial’, Forma is a non-invasive skin tightening technology using radio frequency."
+    "description": "Hailed as the ‘Red Carpet Facial’, Forma is a non-invasive skin tightening technology using radio frequency.",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "60",
@@ -486,7 +545,8 @@
     "name": "Body Ballancer® Contouring",
     "duration": "45 mins",
     "price": "£100.00",
-    "description": "Accelerates the removal of waste products and excess fluid via the lymphatic system, reducing cellulite and improving skin tone."
+    "description": "Accelerates the removal of waste products and excess fluid via the lymphatic system, reducing cellulite and improving skin tone.",
+    "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "61",
@@ -494,7 +554,8 @@
     "name": "Gel Mani & Pedi",
     "duration": "105 mins",
     "price": "£95.00",
-    "description": "Treat yourself to flawless nails from tip to toe, and save time by enjoying simultaneous treatments."
+    "description": "Treat yourself to flawless nails from tip to toe, and save time by enjoying simultaneous treatments.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "62",
@@ -502,7 +563,8 @@
     "name": "BIAB™ Mani & Pedi",
     "duration": "120 mins",
     "price": "£110.00",
-    "description": "Give your hands and feet the BIAB™ treatment. Perfect if you have weak or brittle nails."
+    "description": "Give your hands and feet the BIAB™ treatment. Perfect if you have weak or brittle nails.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "63",
@@ -510,7 +572,8 @@
     "name": "Facial & Massage Combo",
     "duration": "120 mins",
     "price": "£170.00",
-    "description": "For days when you need a full body reset. A bespoke facial to get your glow on, and easing tension and stress from sore muscles."
+    "description": "For days when you need a full body reset. A bespoke facial to get your glow on, and easing tension and stress from sore muscles.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "64",
@@ -518,7 +581,8 @@
     "name": "The Hangover Cure",
     "duration": "120 mins",
     "price": "£279.00",
-    "description": "Revive and shine. A tailored IV Drip alongside a Signature Hydrafacial® and a professional blow-dry."
+    "description": "Revive and shine. A tailored IV Drip alongside a Signature Hydrafacial® and a professional blow-dry.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "65",
@@ -526,7 +590,8 @@
     "name": "Mamma-to-Be",
     "duration": "150 mins",
     "price": "£160.00",
-    "description": "The ultimate relaxing experience designed for expecting mums-to-be. Combines a soothing pedicure with a gentle prenatal massage."
+    "description": "The ultimate relaxing experience designed for expecting mums-to-be. Combines a soothing pedicure with a gentle prenatal massage.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "66",
@@ -534,7 +599,8 @@
     "name": "The Indulgent One",
     "duration": "150 mins",
     "price": "£305.00",
-    "description": "A deeply relaxing massage and a 60-minute Platinum Hydrafacial®. Complete with a chilled glass of bubbles."
+    "description": "A deeply relaxing massage and a 60-minute Platinum Hydrafacial®. Complete with a chilled glass of bubbles.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "67",
@@ -542,7 +608,8 @@
     "name": "Laser Hair Removal - Half Leg",
     "duration": "40 mins",
     "price": "£85.00",
-    "description": "State-of-the-art laser hair removal using the DiolazeXL system for ultra-fast and gentle precision hair removal."
+    "description": "State-of-the-art laser hair removal using the DiolazeXL system for ultra-fast and gentle precision hair removal.",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "68",
@@ -550,7 +617,8 @@
     "name": "Laser Hair Removal - Full Leg",
     "duration": "60 mins",
     "price": "£140.00",
-    "description": "Permanent hair reduction that eliminates unwanted hair by reaching the root of each hair follicle."
+    "description": "Permanent hair reduction that eliminates unwanted hair by reaching the root of each hair follicle.",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "69",
@@ -558,7 +626,8 @@
     "name": "Laser Hair Removal - Hollywood",
     "duration": "30 mins",
     "price": "£85.00",
-    "description": "Fast, gentle, and permanent hair reduction for all skin tones."
+    "description": "Fast, gentle, and permanent hair reduction for all skin tones.",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "70",
@@ -566,7 +635,8 @@
     "name": "IPL Skin Rejuvenation (Face)",
     "duration": "45 mins",
     "price": "£250.00",
-    "description": "Achieve your clearest complexion with Lumecca. Corrects uneven skin tone, age spots, thread veins and melasma."
+    "description": "Achieve your clearest complexion with Lumecca. Corrects uneven skin tone, age spots, thread veins and melasma.",
+    "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "71",
@@ -574,7 +644,8 @@
     "name": "Hydration Drip",
     "duration": "45 mins",
     "price": "£100.00",
-    "description": "Our staple Hydration Drip will rehydrate and refresh your system – ideal for those who are dehydrated."
+    "description": "Our staple Hydration Drip will rehydrate and refresh your system – ideal for those who are dehydrated.",
+    "image": "https://images.unsplash.com/photo-1583947581924-860bda6a5a0d?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "72",
@@ -582,7 +653,8 @@
     "name": "Detox Drip",
     "duration": "45 mins",
     "price": "£150.00",
-    "description": "Contains a mix of powerful antioxidants to help your body detox and feel like new again."
+    "description": "Contains a mix of powerful antioxidants to help your body detox and feel like new again.",
+    "image": "https://images.unsplash.com/photo-1583947581924-860bda6a5a0d?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "73",
@@ -590,7 +662,8 @@
     "name": "Energy Drip",
     "duration": "45 mins",
     "price": "£150.00",
-    "description": "Contains Vitamin B12 and Magnesium, which help support energy-yielding metabolism and reduce tiredness and fatigue."
+    "description": "Contains Vitamin B12 and Magnesium, which help support energy-yielding metabolism and reduce tiredness and fatigue.",
+    "image": "https://images.unsplash.com/photo-1583947581924-860bda6a5a0d?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "74",
@@ -598,7 +671,8 @@
     "name": "Anti-Ageing Drip",
     "duration": "45 mins",
     "price": "£225.00",
-    "description": "A powerful combination of B Vitamins, Glutathione and Amino Acids to combat the effects of anti-ageing."
+    "description": "A powerful combination of B Vitamins, Glutathione and Amino Acids to combat the effects of anti-ageing.",
+    "image": "https://images.unsplash.com/photo-1583947581924-860bda6a5a0d?q=100&w=1600&auto=format&fit=crop"
   },
   {
     "id": "75",
@@ -606,6 +680,7 @@
     "name": "Limitless Drip",
     "duration": "45 mins",
     "price": "£850.00",
-    "description": "Contains ALL our Vitamins and a huge selection of Minerals – our biggest and best IV Drip for a total health overhaul."
+    "description": "Contains ALL our Vitamins and a huge selection of Minerals – our biggest and best IV Drip for a total health overhaul.",
+    "image": "https://images.unsplash.com/photo-1583947581924-860bda6a5a0d?q=100&w=1600&auto=format&fit=crop"
   }
 ]

@@ -721,9 +721,9 @@ export default function Home() {
 
           {/* Animated Titles */}
           <div className="absolute inset-0 size-full flex flex-col items-center pt-[100px] z-20 pointer-events-none">
-            <motion.h1 style={{ x: title1X }} className="font-[family-name:var(--font-cardinal-fruit)] text-[60px] md:text-[100px] leading-none italic opacity-80 text-[var(--color-warm-black)]">Discover</motion.h1>
-            <motion.h1 style={{ x: title2X }} className="text-[80px] md:text-[140px] leading-[0.8] text-[var(--color-warm-black)]">YOUR</motion.h1>
-            <motion.h1 style={{ x: title3X }} className="font-[family-name:var(--font-cardinal-fruit)] text-[60px] md:text-[100px] leading-none italic opacity-80 text-[var(--color-warm-black)]">Confidence</motion.h1>
+            <motion.h1 style={{ x: title1X }} className="font-[family-name:var(--font-cardinal-fruit)] text-[45px] md:text-[100px] leading-none italic opacity-80 text-[var(--color-warm-black)]">Discover</motion.h1>
+            <motion.h1 style={{ x: title2X }} className="text-[60px] md:text-[140px] leading-[0.8] text-[var(--color-warm-black)]">YOUR</motion.h1>
+            <motion.h1 style={{ x: title3X }} className="font-[family-name:var(--font-cardinal-fruit)] text-[45px] md:text-[100px] leading-none italic opacity-80 text-[var(--color-warm-black)]">Confidence</motion.h1>
           </div>
 
           {/* Sliding Images */}
@@ -753,7 +753,7 @@ export default function Home() {
           className='bg-[var(--color-olive-green)] text-[var(--color-warm-black)] py-[80px] px-[29px] flex flex-col items-center justify-center text-center gap-[25px] relative z-10'
         >
           <p className="text-[13px] uppercase tracking-[0.2em] font-medium opacity-70">Ready to glow?</p>
-          <h2 className="font-[family-name:var(--font-cardinal-fruit)] text-[44px] md:text-[72px] leading-[0.95] italic max-w-[700px]">
+          <h2 className="font-[family-name:var(--font-cardinal-fruit)] text-[36px] md:text-[72px] leading-[0.95] italic max-w-[700px]">
             Your journey to radiance starts here
           </h2>
           <button className="mt-[10px] bg-[var(--color-warm-black)] text-white font-medium text-[15px] px-[33px] py-[15px] rounded-[5px] hover:opacity-90 transition-opacity">
